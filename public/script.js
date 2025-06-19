@@ -5,7 +5,7 @@ function toggleMenu() {
   navItems.classList.toggle('active');
 }
 
-const BASE_URL = "https://authentication-backend-1-7cxr.onrender.com";
+const BASE_URL = "https://authentication-backend-2-jndw.onrender.com";
 
 // Contact form submission
 document.querySelector('form[action*="contact"], #contact-form')?.addEventListener('submit', async (e) => {
