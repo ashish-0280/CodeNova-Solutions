@@ -17,15 +17,23 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><i class="fa-solid fa-code"></i> CodeNova Solutions</div>
-            <div class="menu-toggle" onclick="toggleMenu()" style="display: none;">☰</div>
-            <ul>
+            <div class="nav-left">
+                <div class="logo"><i class="fa-solid fa-code"></i> CodeNova Solutions</div>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="nav-right">
+                <ul class="nav-items">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact.html">Contact</a></li>
-            </ul>
+                </ul>
+                <div class="auth-buttons">
+                <a href="login.html" class="auth-btn">Login</a>
+                <a href="signup.html" class="auth-btn signup">Signup</a>
+                </div>
+            </div>
         </nav>
     </header>
 

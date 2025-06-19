@@ -12,6 +12,9 @@ body {
     padding-bottom: 80px;
 }
 
+/* ====================
+   NAVIGATION STRUCTURE
+==================== */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -23,22 +26,80 @@ header nav {
     top: 0;
     z-index: 1001;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    flex-wrap: wrap;
 }
 
-nav ul {
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-    list-style: none;
+.nav-left .logo {
+    font-size: 1.2em;
+    font-weight: bold;
     display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
     gap: 1em;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
 
+.nav-items li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3em 0.6em;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5em;
+}
+
+.auth-btn {
+    padding: 0.4em 0.8em;
+    background-color: white;
+    color: #0066ff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #0066ff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-btn:hover {
+    background-color: #0066ff;
+    color: white;
+}
+
+.auth-btn.signup {
+    background-color: #00c6ff;
+    border-color: #00c6ff;
+    color: white;
+}
+
+.auth-btn.signup:hover {
+    background-color: #0099cc;
+}
+
+/* ====================
+   MENU TOGGLE FOR MOBILE
+==================== */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* ====================
+   HERO, CONTENT, ETC.
+==================== */
 .hero {
     padding: 4em 2em;
     text-align: center;
@@ -161,82 +222,6 @@ footer {
     margin-bottom: 0.5em;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        font-size: 1.5em;
-        cursor: pointer;
-        color: white;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 0.5em;
-        width: 100%;
-        max-height: 0;
-    }
-
-    nav ul.active {
-        display: flex;
-        max-height: 500px;
-    }
-    header nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.5em;
-        width: 100%;
-    }
-
-    .hero {
-        padding: 2em 1em;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .content {
-        padding: 1.5em;
-        margin: 2em 1em;
-    }
-
-    .team-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        max-width: 100%;
-    }
-
-    .content form {
-        padding: 1em;
-        width: 100%;
-    }
-
-    footer {
-        font-size: 0.85em;
-        padding: 0.5em;
-    }
-
-    .job-listing {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .job p,
-    .service p {
-        margin-left: 0;
-    }
-}
-
 .features, .why-us, .cta {
     padding: 3em;
     text-align: center;
@@ -287,16 +272,99 @@ footer {
     margin-top: 1em;
 }
 
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+.content h3 {
+    color: #0072ff;
+}
+
+/* ====================
+   RESPONSIVE STYLES
+==================== */
 @media (max-width: 768px) {
+    header nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        margin-top: 0.5em;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .auth-buttons {
+        position: absolute;
+        top: 1.2em;
+        right: 1em;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
     .feature-grid {
         flex-direction: column;
         align-items: center;
     }
-}
-.content h2{
-    font-size: 2.5em;
-    margin-bottom: 0.8em;
-}
-.content h3{
-    color: #0072ff;
+
+    .hero {
+        padding: 2em 1em;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        padding: 1.5em;
+        margin: 2em 1em;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+
+    .content form {
+        padding: 1em;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.85em;
+        padding: 0.5em;
+    }
+
+    .job-listing {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .job p,
+    .service p {
+        margin-left: 0;
+    }
 }

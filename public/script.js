@@ -1,8 +1,8 @@
 console.log("Website loaded successfully");
 
 function toggleMenu() {
-  const menu = document.querySelector('nav ul');
-  if (menu) menu.classList.toggle('active');
+  const navItems = document.querySelector('.nav-items');
+  navItems.classList.toggle('active');
 }
 
 document.querySelector('form')?.addEventListener('submit', async (e) => {
