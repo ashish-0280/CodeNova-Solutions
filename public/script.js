@@ -5,7 +5,7 @@ function toggleMenu() {
   navItems.classList.toggle('active');
 }
 
-const BASE_URL = "https://authentication-backend-yq92.onrender.com";
+const BASE_URL = "https://authentication-backend-1-7cxr.onrender.com";
 
 // Contact form submission
 document.querySelector('form[action*="contact"], #contact-form')?.addEventListener('submit', async (e) => {
@@ -15,7 +15,7 @@ document.querySelector('form[action*="contact"], #contact-form')?.addEventListen
   const message = e.target.message.value;
 
   try {
-    const res = await fetch(`${BASE_URL}/api/contact`, {
+    const res = await fetch(`https://codenova-solutions.onrender.com/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message })
