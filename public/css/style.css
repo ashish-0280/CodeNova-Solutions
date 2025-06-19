@@ -109,7 +109,6 @@ footer {
     z-index: 1000;
 }
 
-/* [CAREERS PAGE STYLING ADDED HERE] */
 .job-listing {
     display: flex;
     flex-direction: column;
@@ -127,7 +126,6 @@ footer {
     line-height: 1.6;
 }
 
-/* [SERVICES PAGE STYLING ADDED HERE] */
 .service {
     margin-bottom: 2.5em;
 }
@@ -142,7 +140,6 @@ footer {
     line-height: 1.7;
 }
 
-/* [ABOUT PAGE STYLING FIXED HERE] */
 .team-grid {
     display: flex;
     justify-content: space-around;
@@ -240,7 +237,6 @@ footer {
     }
 }
 
-/* Home Page Extras */
 .features, .why-us, .cta {
     padding: 3em;
     text-align: center;
