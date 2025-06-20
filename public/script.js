@@ -5,7 +5,7 @@ function toggleMenu() {
   navItems.classList.toggle('active');
 }
 
-const BASE_URL = "http://127.0.0.1:5500";
+const BASE_URL = "http://localhost:5000";
 
 // Contact form submission
 document.querySelector('form[action*="contact"], #contact-form')?.addEventListener('submit', async (e) => {
@@ -15,7 +15,7 @@ document.querySelector('form[action*="contact"], #contact-form')?.addEventListen
   const message = e.target.message.value;
 
   try {
-    const res = await fetch(`https://codenova-solutions.onrender.com/api/contact`, {
+    const res = await fetch(`${BASE_URL}/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message })
