@@ -323,8 +323,8 @@ footer {
 
     .auth-btn,
     .btn {
-        padding: 0.3em 0.6em;
-        font-size: 0.75em;
+        padding: 0.1em 0.3em;
+        font-size: 0.85em;
     }
     .logout-btn{
         padding: 0.1em 0.4em;
