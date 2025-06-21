@@ -7,14 +7,14 @@ const contactRoute = require('./routes/contact');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
 connectDB();
 
 // CORS Configuration
 const allowedOrigins = [
-  'http://localhost:3000',
+  'http://localhost:5000',
   'https://codenovasolutions8.netlify.app'
 ];
 

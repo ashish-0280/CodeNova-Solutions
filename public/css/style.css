@@ -322,10 +322,15 @@ footer {
     }
 
     .auth-btn,
-    .logout-btn,
     .btn {
         padding: 0.3em 0.6em;
         font-size: 0.75em;
+    }
+    .logout-btn{
+        padding: 0.1em 0.4em;
+        font-size: 0.8em;
+        width: 6em;
+        height: 3em;
     }
 
     .feature-grid {
