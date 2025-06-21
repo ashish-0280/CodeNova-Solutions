@@ -285,6 +285,7 @@ footer {
    RESPONSIVE STYLES
 ==================== */
 @media (max-width: 768px) {
+    
     header nav {
         flex-direction: row;
         align-items: flex-start;
@@ -318,6 +319,13 @@ footer {
         right: 1em;
         flex-direction: row;
         gap: 0.5em;
+    }
+
+    .auth-btn,
+    .logout-btn,
+    .btn {
+        padding: 0.4em 0.8em;
+        font-size: 0.85em;
     }
 
     .feature-grid {
