@@ -287,7 +287,7 @@ footer {
 @media (max-width: 768px) {
     
     header nav {
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -307,6 +307,7 @@ footer {
         gap: 0.5em;
         width: 100%;
         margin-top: 0.5em;
+        align-items: flex-start;
     }
 
     .nav-items.active {
@@ -315,7 +316,7 @@ footer {
 
     .auth-buttons {
         position: absolute;
-        top: 1.2em;
+        top: 1em;
         right: 1em;
         flex-direction: row;
         gap: 0.5em;
@@ -325,7 +326,7 @@ footer {
     .logout-btn,
     .btn {
         padding: 0.4em 0.8em;
-        font-size: 0.85em;
+        font-size: 0.55em;
     }
 
     .feature-grid {

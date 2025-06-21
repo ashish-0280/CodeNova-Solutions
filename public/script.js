@@ -5,7 +5,7 @@ function toggleMenu() {
   navItems.classList.toggle('active');
 }
 
-const BASE_URL = "https://codenova-solutions-1.onrender.com";
+const BASE_URL = "http://localhost:5000";
 
 // Contact form submission
 document.querySelector('form[action*="contact"], #contact-form')?.addEventListener('submit', async (e) => {
