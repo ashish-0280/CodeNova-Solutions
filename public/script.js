@@ -114,4 +114,46 @@ const logoutBtn = document.querySelector('.logout-btn');
   }
 });
 
+// Modal content definitions
+const modalContent = {
+  automation: {
+    title: "Automation",
+    text: "Streamline operations with modern tools and custom workflows that save time and reduce human error.",
+    link: "automation.html"
+  },
+  cybersecurity: {
+    title: "Cybersecurity",
+    text: "Secure your infrastructure with advanced tools, threat detection, and 24/7 monitoring services.",
+    link: "cybersecurity.html"
+  },
+  analytics: {
+    title: "Analytics",
+    text: "Uncover trends and drive smarter decisions using modern data dashboards and visualizations.",
+    link: "analytics.html"
+  }
+};
+
+// Show modal on card click
+document.querySelectorAll(".explore-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.getAttribute("data-modal");
+    const content = modalContent[key];
+    const modalBody = document.getElementById("modal-body");
+
+    modalBody.innerHTML = `
+      <h2>${content.title}</h2>
+      <p>${content.text}</p>
+      <a class="btn" href="${content.link}">Learn More</a>
+    `;
+
+    document.getElementById("modal").classList.remove("hidden");
+  });
+});
+
+// Close modal
+document.getElementById("closeModal").addEventListener("click", () => {
+  document.getElementById("modal").classList.add("hidden");
+});
+
+
 
