@@ -420,6 +420,7 @@ footer {
 
 .explore-card:hover {
   transform: translateY(-5px);
+  cursor: pointer;
 }
 
 .explore-card i {
