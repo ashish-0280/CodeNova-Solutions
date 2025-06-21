@@ -315,6 +315,7 @@ footer {
     }
 
     .auth-buttons {
+        margin-top: 0.4em;
         position: absolute;
         top: 1em;
         right: 1em;
